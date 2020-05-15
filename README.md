@@ -1,6 +1,6 @@
-#Spring boot - Zeebe Client
+# Spring Zeebe
 
-##Using Docker without docker-compose
+## Using Docker without docker-compose
 
 run Zeebe with Docker:
 
