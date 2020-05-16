@@ -35,5 +35,18 @@ public class EngineResource {
                 event.getWorkflowKey(), event.getBpmnProcessId(), event.getVersion(), event.getWorkflowInstanceKey());
     }
 
+    @GetMapping("workflow")
+    public void workflow() {
+        final WorkflowInstanceEvent workflowInstanceEvent =
+                client
+                        .newCreateInstanceCommand()
+                        .bpmnProcessId("order-process")
+                        .latestVersion()
+                        .send()
+                        .join();
+
+        System.out.println(
+                "Workflow instance created with key: " + workflowInstanceEvent.getWorkflowInstanceKey());
+    }
 
 }
