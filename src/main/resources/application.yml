@@ -2,4 +2,6 @@
 zeebe:
   client:
     broker:
-      contactPoint: "127.0.0.1:26500"
+      contactPoint: "3.92.188.91:26500"
+    security:
+      plaintext: true
